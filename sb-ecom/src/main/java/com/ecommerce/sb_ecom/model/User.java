@@ -5,7 +5,6 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
-import org.hibernate.validator.constraints.Length;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -29,7 +28,7 @@ public class User {
     @NotBlank
     @Size(max = 20)
     @Column(name = "username")
-    private String username;
+    private String userName;
 
     @NotBlank
     @Size(max = 50)
@@ -42,10 +41,10 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    public User(String password, String email, String username) {
+    public User(String username, String email, String password) {
         this.password = password;
         this.email = email;
-        this.username = username;
+        this.userName = username;
     }
 
     @Setter

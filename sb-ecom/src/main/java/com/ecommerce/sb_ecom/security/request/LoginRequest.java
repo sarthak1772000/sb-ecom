@@ -1,7 +1,10 @@
-package com.ecommerce.sb_ecom.security.jwt;
+package com.ecommerce.sb_ecom.security.request;
+
+import jakarta.validation.constraints.NotBlank;
 
 public class LoginRequest {
 
+    @NotBlank
     private String username;
 
     public String getPassword() {
@@ -20,5 +23,6 @@ public class LoginRequest {
         this.username = username;
     }
 
+    @NotBlank
     private String password;
 }
